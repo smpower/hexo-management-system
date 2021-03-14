@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "~antd/dist/antd.less";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  // rem em
+  // rem 相对于根元素 html 的 font-size，r 就是 root 的意思
+  // em 相对于父元素的 font-size
+  // 16px * 62。5% = 10px -> 1rem === 10px
+  font-size: 62.5%;
+
+  body #root .App {
+    // vh - viewport height 视口高度
+    min-height: 100vh;
+  }
 }
