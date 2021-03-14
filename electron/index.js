@@ -1,26 +1,17 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
+const aboutPanelOptions = require("./aboutPanelOptions");
+const createWindow = require("./createWindow");
+const { isMac, template } = require("./template");
 
-const { NODE_ENV } = process.env;
+const menu = Menu.buildFromTemplate(template(app));
+Menu.setApplicationMenu(menu);
 
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true,
-    },
-  });
-
-  if (NODE_ENV === "development") win.loadURL("http://localhost:3000");
-  else win.loadFile("build/index.html");
-}
+app.setAboutPanelOptions(aboutPanelOptions);
 
 app.whenReady().then(createWindow);
 
 app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit();
-  }
+  if (!isMac) app.quit();
 });
 
 app.on("activate", () => {
