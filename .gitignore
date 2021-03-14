@@ -11,6 +11,12 @@
 # production
 /build
 
+# electron
+/out
+
+# vscode
+/.vscode
+
 # misc
 .DS_Store
 .env.local
