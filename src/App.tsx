@@ -1,19 +1,12 @@
-import styled from '@emotion/styled'
+import { Content, Sidebar } from 'components';
 
 function App() {
   return (
-    <Wrapper>
-      Hello, Hexo Management System!
-    </Wrapper>
+    <div className="App">
+      <Sidebar />
+      <Content />
+    </div>
   );
 }
 
 export default App;
-
-const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
