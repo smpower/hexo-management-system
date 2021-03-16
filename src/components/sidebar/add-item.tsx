@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const AddItem = () => {
-  return <Wrapper>add-item component</Wrapper>;
+  return <Container>add-item component</Container>;
 };
 
-const Wrapper = styled.div``;
+const Container = styled.div``;

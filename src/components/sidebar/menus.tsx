@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Menus = () => {
-  return <Wrapper>menus component</Wrapper>;
+  return <Container>menus component</Container>;
 };
 
-const Wrapper = styled.div``;
+const Container = styled.div``;

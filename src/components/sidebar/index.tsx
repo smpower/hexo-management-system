@@ -8,15 +8,28 @@ import { Userinfo } from './userinfo';
 
 export const Sidebar = () => {
   return (
-    <Wrapper>
+    <Container>
       <Topbar />
       <Userinfo />
       <ChangeRepo />
       <Settings />
       <Menus />
       <AddItem />
-    </Wrapper>
+    </Container>
   );
 };
 
-const Wrapper = styled.div``;
+const Container = styled.div`
+  width: 240px;
+  height: 100vh;
+  background: #f7f6f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  user-select: none;
+  &:hover .toggle-icon-wrapper {
+    opacity: 1;
+  }
+`;
